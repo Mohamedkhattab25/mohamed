@@ -2,7 +2,10 @@ import java.util.ArrayList;
 
 /**
  * This class stores shared data, including lists and flags.
+<<<<<<< HEAD
  * @author mohamed khattab
+=======
+>>>>>>> branch 'master' of https://github.com/Mohamedkhattab25/mohamed.git
  */
 public class SharedData {
     
@@ -75,4 +78,8 @@ public class SharedData {
     public void setFlag(boolean flag) {
         this.flag = flag;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> branch 'master' of https://github.com/Mohamedkhattab25/mohamed.git
