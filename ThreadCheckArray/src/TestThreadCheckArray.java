@@ -11,7 +11,6 @@ public class TestThreadCheckArray {
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
             Thread thread1, thread2;
-<<<<<<< HEAD
             
             // Getting user input for array size
             System.out.println("Enter array size");
@@ -62,45 +61,6 @@ public class TestThreadCheckArray {
                 System.out.print(index + "    ");
             System.out.println();
             
-=======
-            System.out.println("Enter array size");
-            int num  = input.nextInt();
-            ArrayList<Integer> array = new ArrayList<>();
-            System.out.println("Enter numbers for array");
-            
-            
-            for (int index = 0; index < num; index++) 
-                array.add(input.nextInt());
-            
-            System.out.println("Enter number");
-            num = input.nextInt();
-            
-            SharedData sd = new SharedData(array, num);
-            
-            thread1 = new Thread(new ThreadCheckArray(sd), "thread1");
-            thread2 = new Thread(new ThreadCheckArray(sd), "thread2");
-            thread1.start();
-            thread2.start();
-            try 
-            {
-                thread1.join();
-                thread2.join();
-            } 
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-            if (!sd.getFlag())
-            {
-                System.out.println("Sorry");
-                return;
-            }
-            System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().size());
-            System.out.print("I:    ");
-            for(int index = 0; index < sd.getArray().size() ; index++)
-                System.out.print(index + "    ");
-            System.out.println();
->>>>>>> branch 'master' of https://github.com/Mohamedkhattab25/mohamed.git
             System.out.print("A:    ");
             for (int index : sd.getArray())
             {
